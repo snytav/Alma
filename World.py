@@ -1,5 +1,5 @@
 import time
-import _World
+#import _World
 import numpy as np
 from Field import Field
 from constants import *
