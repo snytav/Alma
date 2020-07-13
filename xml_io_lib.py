@@ -1,4 +1,5 @@
 from xml.dom.minidom import parse
+import numpy as np
 
 def xread(filename):
     # parse an xml file by name
@@ -24,10 +25,11 @@ def xread(filename):
 
         if name == 'NodeVol':
             total_len = len(nums)
-            nx = int(pow(total_len,1.0/3.0))
+            nx = int(pow(total_len,1.0/3.0))+1
             ny = nx
             nz = nx
-            node_vol = nums.reshape(nx,ny,nz)
+            node_vol = np.asarray(nums)
+            node_vol = node_vol.reshape(nx,ny,nz)
 
         if name == 'ef':
             ef = nums
