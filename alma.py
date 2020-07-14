@@ -8,12 +8,11 @@ import numpy as np
 import Output
 from xml_io_lib import xread
 
-xread('fields_00100.vti')
 
 
 world = World(21, 21, 21)
 world.setExtents([-0.1,-0.1,0],[0.1,0.1,0.2])
-world.setTime(2e-10,10000)
+world.setTime(2e-10,10) # 10000
 
 sp1 = Species("O+", 16*AMU, QE, world)
 sp2 = Species("e-", ME, -1*QE, world)
@@ -49,8 +48,8 @@ while(world.advanceTime()):
     solver.computeEF()
 
     #screen and file output
-    Output.screenOutput(world,species)
-    Output.diagOutput(world,species)
+    #Output.screenOutput(world,species)
+    #Output.diagOutput(world,species)
     #
     # periodically write out results
     if world.getTs()%100 == 0 or world.isLastTimeStep():

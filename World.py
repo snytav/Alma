@@ -1,5 +1,4 @@
 import time
-import _World
 import numpy as np
 from Field import Field
 from constants import *
@@ -72,6 +71,8 @@ class World(object):
     def advanceTime(self):
         self.time += self.dt
         self.ts += 1
+        if(self.ts % 2 == 0):
+            print("Time step: {}; time: {}; dt: {}; {}".format(self.ts, self.time, self.dt, self.ts*100/self.num_ts))
         return self.ts<= self.num_ts
 
     # converts physical position to logical coordinate
