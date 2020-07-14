@@ -17,6 +17,11 @@
 5.1.2.4. Colour map
 5.1.2.5. Save to file
 5.1.2.6. Picture size as parameter
+5.1.2.7.1. New IO project in PyCharm (or some other)
+5.1.2.7.2. simple example from Stack Abuse
+5.1.2.7.3. Take input from fields_00100.vti, make the same
+5.1.2.7.4. Check them in Paraview
+5.1.2.7.5. Insert call to code
 5.2. Number density -      p.83, fig. 2.10. output.cpp:51
 5.3.  p.84, fig. 2.11
 5.4. Quiet start  - p.86, fig. 2.12
