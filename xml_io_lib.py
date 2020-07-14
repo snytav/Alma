@@ -1,4 +1,5 @@
 from xml.dom.minidom import parse
+import numpy as np
 
 def xread(filename):
     # parse an xml file by name
@@ -24,31 +25,33 @@ def xread(filename):
 
         if name == 'NodeVol':
             total_len = len(nums)
-            nx = int(pow(total_len,1.0/3.0))
+            nx = int(pow(total_len,1.0/3.0))+1
             ny = nx
             nz = nx
-            node_vol = nums.reshape(nx,ny,nz)
+            node_vol = np.asarray(nums)
+            node_vol = node_vol.reshape(nx,ny,nz)
 
         if name == 'ef':
-            ef = nums
+            ef = np.asarray(nums)
+            ef = ef.reshape(nx,ny,nz,3)
 
         if name == 'phi':
-            phi = nums
+            phi = np.asarray(nums)
+            phi = phi.reshape(nx,ny,nz)
 
         if name == 'rho':
-            rho = nums
+            rho = np.asarray(nums)
+            rho = rho.reshape(nx,ny,nz)
 
         if name == 'nd.O+':
-            ndp = nums
+            ndp = np.asarray(nums)
+            ndp = ndp.reshape(nx,ny,nz)
 
         if name == 'nd.e-':
-            ndm = nums
+            ndm = np.asarray(nums)
+            ndm = ndm.reshape(nx,ny,nz)
 
-
-
-        #l1 = ' '.join(t.nodeValue for t in name[0].childNodes if t.nodeType == t.TEXT_NODE)
-
-    return
+    return [nx, ny, nz, node_vol, ef, phi, rho, ndp, ndm]
 
     # all item attributes
     print('\nAll attributes:')
