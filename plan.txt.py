@@ -13,12 +13,8 @@
 5.1. Field and potential - p.72, fig. 2.5. output.cpp:12
 5.1.2. In 3D plot:
 5.1.2.2. size of X and Y as params
-5.1.2.3. Axes title as titles and triplet
-5.1.2.4. Colour map
 5.1.2.5. Save to file
 5.1.2.6. Picture size as parameter
-5.1.2.7.1. New IO project in PyCharm (or some other)
-5.1.2.7.2. simple example from Stack Abuse
 5.1.2.7.3. Take input from fields_00100.vti, make the same
 5.1.2.7.4. Check them in Paraview
 5.1.2.7.5. Insert call to code
