@@ -1,0 +1,72 @@
+[33mcommit 8f57494a9732ea642cabbb69b3c6a12c43d03c71[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: snytav <snytav@gmail.com>
+Date:   Wed Jul 22 13:16:41 2020 +0700
+
+    loop separated
+
+[33mcommit d4821fa776a700d29fcb41ab20247d456ef0ece6[m
+Author: snytav <snytav@gmail.com>
+Date:   Tue Jul 21 20:08:50 2020 +0700
+
+    plan changed
+
+[33mcommit 3ae88efffd3ec0abafed2e608aa5b155a004133a[m
+Author: snytav <snytav@gmail.com>
+Date:   Tue Jul 14 13:52:54 2020 +0700
+
+    VTK IO plan and VTK/VTI sample file
+
+[33mcommit 5ed894c30eacfb8cb32afb3ca3a6720f376f6540[m
+Merge: a88d65b d48fca1
+Author: Alexey Snytnikov <snytav@gmail.com>
+Date:   Tue Jul 14 12:41:55 2020 +0700
+
+    Merge pull request #2 from snytav/vtk_io
+    
+    Adding read VTK file
+
+[33mcommit d48fca13251ef9d3c492cd461795fc58f2cc434b[m[33m ([m[1;31morigin/vtk_io[m[33m)[m
+Merge: 01c1566 a88d65b
+Author: Alexey Snytnikov <snytav@gmail.com>
+Date:   Tue Jul 14 12:41:24 2020 +0700
+
+    Merge branch 'master' into vtk_io
+
+[33mcommit a88d65bbacf6e89cfc797939bd49d79d0d0fc553[m
+Merge: ddc8b8f 6546d22
+Author: Alexey Snytnikov <snytav@gmail.com>
+Date:   Tue Jul 14 12:35:36 2020 +0700
+
+    Merge pull request #1 from snytav/fix_for_optim
+    
+    FIX: remove redundant functions, added progress info
+
+[33mcommit 6546d224f98ec4f26df7d3cc031922438bd6eb48[m[33m ([m[1;31morigin/fix_for_optim[m[33m)[m
+Author: Alexey Romanenko <aromanenko@nvidia.com>
+Date:   Mon Jul 13 21:52:16 2020 -0700
+
+    FIX: remove redundant functions, added progress info
+
+[33mcommit 01c15661ada5e2f3f17f54ea8bad92954d1a48b5[m[33m ([m[1;32mvtk_io[m[33m)[m
+Author: snytav <snytav@gmail.com>
+Date:   Tue Jul 14 01:37:45 2020 +0700
+
+    all arrays ready
+
+[33mcommit b4797496b0984e60181a18194cd72c4eaf480fe6[m
+Author: snytav <snytav@gmail.com>
+Date:   Tue Jul 14 01:11:33 2020 +0700
+
+    read node_vol correctly
+
+[33mcommit 760010095260eed4532832ed5c727d0a865cbd2a[m
+Author: snytav <snytav@gmail.com>
+Date:   Mon Jul 13 13:26:42 2020 +0700
+
+    removert import _World
+
+[33mcommit ddc8b8f321483d8088a54cda205e0746e3d3a0b4[m
+Author: snytav <snytav@gmail.com>
+Date:   Mon Jul 13 11:19:57 2020 +0700
+
+    1st commit

@@ -9,7 +9,7 @@ def write_3D(world,field,name,n_timestep,n_iter):
     for i in range(0,world.ni):
         for j in range(0,world.nj):
             for k in range(0,world.nk):
-                f.write("%10d %10d %10d  %25.15e \n" % (i,j,k,field[i][j][k]))
+                f.write("%10d %10d %10d  %15.15e \n" % (i,j,k,field[i][j][k]))
 
     f.close()
     return
