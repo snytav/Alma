@@ -49,8 +49,10 @@ class PotentialSolver(object):
                 for i in range(1, self.world.ni-1):
                     for j in range(1, self.world.nj-1):
                         for k in range(1, self.world.nk-1):
-                            R =( -phi[i][j][k] * (2 * idx2 + 2 * idy2 + 2 * idz2) +
-                            rho[i][j][k] / constants.EPS_0 +
+                            R = -phi[i][j][k] * (2 * idx2 + 2 * idy2 + 2 * idz2)
+
+                        for k in range(1, self.world.nk-1):
+                            R += (rho[i][j][k] / constants.EPS_0 +
                             idx2 * (phi[i - 1][j][k] + phi[i + 1][j][k]) +
                             idy2 * (phi[i][j - 1][k] + phi[i][j + 1][k]) +
                             idz2 * (phi[i][j][k - 1] + phi[i][j][k + 1]) )
