@@ -2,6 +2,7 @@ from World import World
 import constants
 from math import sqrt
 from debug_output import write_3D
+import numpy as np
 
 class PotentialSolver(object):
     # constructor, sets world
@@ -26,6 +27,7 @@ class PotentialSolver(object):
         converged = False
         # rho OK for step 1,2
         write_3D(self.world, rho, 'rho', self.world.getTs(),0)
+        phi_new = np.zeros((self.world.ni,self.world.nj,self.world.nk))
 
         '''solve potential'''
         for it in range(0, self.max_solver_it):
