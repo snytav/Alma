@@ -35,13 +35,13 @@ class PotentialSolver(object):
                 for j in range(1, self.world.nj-1):
                     for k in range(1, self.world.nk-1):
                         # standard internal open node
-                        phi_new = (rho[i][j][k] / constants.EPS_0 +
+                        phi_new[i][j][k] = (rho[i][j][k] / constants.EPS_0 +
                                    idx2 * (phi[i - 1][j][k] + phi[i + 1][j][k]) +
                                    idy2 * (phi[i][j - 1][k] + phi[i][j + 1][k]) +
                                    idz2 * (phi[i][j][k - 1] + phi[i][j][k + 1])) / (2 * idx2 + 2 * idy2 + 2 * idz2)
 
                         '''SOR'''
-                        phi[i][j][k] = phi[i][j][k] + 1.4 * (phi_new - phi[i][j][k])
+                        phi[i][j][k] = phi[i][j][k] + 1.4 * (phi_new[i][j][k] - phi[i][j][k])
 # 200 iters
             write_3D(self.world,phi, 'phi', self.world.getTs(), it)
 
