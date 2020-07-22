@@ -31,12 +31,13 @@ class PotentialSolver(object):
 
         '''solve potential'''
         for it in range(0, self.max_solver_it):
+            #phi_new =
             for i in range(1, self.world.ni-1):
                 for j in range(1, self.world.nj-1):
                     for k in range(1, self.world.nk-1):
                         # standard internal open node
-                        phi_new[i][j][k] = (rho[i][j][k] / constants.EPS_0 +
-                                   idx2 * (phi[i - 1][j][k] + phi[i + 1][j][k]) +
+                        phi_new[i][j][k] = rho[i][j][k] / constants.EPS_0 / (2 * idx2 + 2 * idy2 + 2 * idz2)
+                        phi_new[i][j][k] += (idx2 * (phi[i - 1][j][k] + phi[i + 1][j][k]) +
                                    idy2 * (phi[i][j - 1][k] + phi[i][j + 1][k]) +
                                    idz2 * (phi[i][j][k - 1] + phi[i][j][k + 1])) / (2 * idx2 + 2 * idy2 + 2 * idz2)
 
