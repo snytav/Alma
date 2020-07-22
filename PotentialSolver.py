@@ -29,9 +29,11 @@ class PotentialSolver(object):
         write_3D(self.world, rho, 'rho', self.world.getTs(),0)
         phi_new = np.zeros((self.world.ni,self.world.nj,self.world.nk))
 
+        h2 = (2 * idx2 + 2 * idy2 + 2 * idz2)
+
         '''solve potential'''
         for it in range(0, self.max_solver_it):
-            phi_new = rho / constants.EPS_0 / (2 * idx2 + 2 * idy2 + 2 * idz2)
+            phi_new = rho / constants.EPS_0 / h2
             for i in range(1, self.world.ni-1):
                 for j in range(1, self.world.nj-1):
                     for k in range(1, self.world.nk-1):
@@ -39,7 +41,7 @@ class PotentialSolver(object):
 
                         phi_new[i][j][k] += (idx2 * (phi[i - 1][j][k] + phi[i + 1][j][k]) +
                                    idy2 * (phi[i][j - 1][k] + phi[i][j + 1][k]) +
-                                   idz2 * (phi[i][j][k - 1] + phi[i][j][k + 1])) / (2 * idx2 + 2 * idy2 + 2 * idz2)
+                                   idz2 * (phi[i][j][k - 1] + phi[i][j][k + 1])) / h2
 
                         '''SOR'''
                         phi[i][j][k] = phi[i][j][k] + 1.4 * (phi_new[i][j][k] - phi[i][j][k])
