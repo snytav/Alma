@@ -44,7 +44,7 @@ class PotentialSolver(object):
                                    idz2 * (phi[i][j][k - 1] + phi[i][j][k + 1])) / h2
 
                         '''SOR'''
-                        phi[i][j][k] = phi[i][j][k] + 1.4 * (phi_new[i][j][k] - phi[i][j][k])
+                        phi[i][j][k] = 1.4 * phi_new[i][j][k] - 0.4*phi[i][j][k]
 # 200 iters
             write_3D(self.world,phi, 'phi', self.world.getTs(), it)
 
